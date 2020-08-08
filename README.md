@@ -35,3 +35,11 @@
   * Listner for writing to the Cosmos DB.
  
     [![Listner.png](https://i.postimg.cc/d1YD34dq/Listner.png)](https://postimg.cc/yJL7rhv5)
+    
+    
+ ### Team
+
+> Or Contributors/People
+
+| :---: |:---:| :---:|
+| [![Passport-Photograph.jpg](https://i.postimg.cc/prCNWtr6/Passport-Photograph.jpg)](https://postimg.cc/p5mcC4Df) |
