@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="DEMO-SCRIPT" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the Jyoti Prakash Mallick. Please contact further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">&lt;Application URL&gt;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CosmosDB_API" elementType="Argument">
+            <stringProp name="Argument.name">CosmosDB_API</stringProp>
+            <stringProp name="Argument.value">&lt;cosmosDB&gt;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">The End point URL to make the post call</stringProp>
+          </elementProp>
+          <elementProp name="CosmosDB_Master_Key" elementType="Argument">
+            <stringProp name="Argument.name">CosmosDB_Master_Key</stringProp>
+            <stringProp name="Argument.value">&lt;master_key&gt;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Cosmos DB Master Key, can be obtained from Azure Portal</stringProp>
+          </elementProp>
+          <elementProp name="CosmosDB_URI" elementType="Argument">
+            <stringProp name="Argument.name">CosmosDB_URI</stringProp>
+            <stringProp name="Argument.value">&lt;cosmosdb_uri&gt;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">CosmosDB_API_URL, can be obtained from Azure Portal</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Performance_Thread" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">300</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="AuthToken_Generator_for_cosmos_db" enabled="true">
+          <stringProp name="TestPlan.comments">For Generating the Auth Token Generator from Microsoft</stringProp>
+        </OnceOnlyController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">load(&apos;crypto-js.js&apos;);
+
+var mastKey = &quot;${CosmosDB_Master_Key}&quot;;
+var today = new Date();
+var UTCstring = today.toUTCString();
+vars.put(&quot;RFC1123time&quot;, UTCstring);
+
+var url = &quot;${CosmosDB_URI}&quot;  
+var strippedurl = url.replace(new RegExp(&apos;^https?://[^/]+/&apos;),&apos;/&apos;);
+var strippedparts = strippedurl.split(&quot;/&quot;);
+var truestrippedcount = (strippedparts.length - 1);
+var resourceId = &quot;dbs/newTestDB/colls/JMeter-Result&quot;;
+var resType = &quot;docs&quot;;
+var verb = &quot;post&quot;;
+var date = UTCstring.toLowerCase();
+var key = CryptoJS.enc.Base64.parse(mastKey);
+var text = (verb || &quot;&quot;).toLowerCase() + &quot;\n&quot; +
+               (resType || &quot;&quot;).toLowerCase() + &quot;\n&quot; +
+               (resourceId || &quot;&quot;) + &quot;\n&quot; +
+               (date || &quot;&quot;).toLowerCase() + &quot;\n&quot; +
+               &quot;&quot; + &quot;\n&quot;;
+var signature = CryptoJS.HmacSHA256(text, key);
+var base64Bits = CryptoJS.enc.Base64.stringify(signature);
+var MasterToken = &quot;master&quot;;
+var TokenVersion = &quot;1.0&quot;;
+auth = encodeURIComponent(&quot;type=&quot; + MasterToken + &quot;&amp;ver=&quot; + TokenVersion + &quot;&amp;sig=&quot; + base64Bits);
+//log.info(&quot;-------&gt;&quot;+auth)
+vars.put(&quot;auth&quot;, auth);</stringProp>
+            <stringProp name="scriptLanguage">javascript</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Sample_Transaction" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01_Transaction" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">10.0</stringProp>
+            <stringProp name="RandomTimer.range">100.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <JSR223Listener guiclass="TestBeanGUI" testclass="JSR223Listener" testname="Report_Sender_to_Azure_Cosmos_Db" enabled="true">
+          <stringProp name="cacheKey">false</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.util.EntityUtils;
+import org.apache.jmeter.samplers.SampleResult;
+import groovy.json. *
+
+def payload = [: ]
+def uuid = UUID.randomUUID().toString()
+payload.put(&apos;id&apos;, uuid)
+def testDetails = []
+testDetails.add([&apos;project_name&apos;: vars.get(&apos;Project_Name&apos;)]);
+testDetails.add([&apos;test_Name&apos;: vars.get(&apos;Test_Name&apos;)]);
+testDetails.add([&apos;test_id&apos;: vars.get(&apos;test_Id&apos;)]);
+testDetails.add([&apos;test_executer&apos;:vars.get(&apos;Test_Triggered_By&apos;)]);
+payload.put(&apos;test_details&apos;, testDetails);
+String status = &apos;Failure&apos;;
+def responseDetails = []
+
+try {
+  if (ctx.getPreviousResult().isSuccessful()) {
+    status = &quot;Success&quot;;
+    responseDetails.add([&apos;requestName&apos;: ctx.getPreviousResult().getSampleLabel(),
+    &apos;status&apos;: status,
+    &apos;responseTime&apos;: ctx.getPreviousResult().getTime(),
+    &apos;responsecode&apos;: ctx.getPreviousResult().getResponseCode(),
+    &apos;sentBytes&apos;: ctx.getPreviousResult().getSentBytes(),
+    &apos;receivedBytes&apos;: ctx.getPreviousResult().getBytesAsLong(),
+    &apos;responseMessage&apos;: ctx.getPreviousResult().getResponseMessage(),
+    &apos;samplecount&apos;: ctx.getPreviousResult().getSampleCount(),
+    &apos;errorCount&apos;: ctx.getPreviousResult().getErrorCount(),
+    &apos;time&apos;: ctx.getPreviousResult().getTimeStamp()])
+    payload.put(&apos;response_Details&apos;, responseDetails)
+    payload.put(&apos;thread_Details&apos;, [&apos;number_vusers&apos;: ctx.getThreadGroup().getNumberOfThreads()])
+    //log.info(new groovy.json.JsonBuilder(payload).toPrettyString())
+  }
+  else {
+    //log.info(&quot;Something is not correct, please check the values&quot;);
+    responseDetails.add([&apos;requestName&apos;: ctx.getPreviousResult().getSampleLabel(),
+    &apos;status&apos;: status,
+    &apos;responseTime&apos;: ctx.getPreviousResult().getTime(),
+    &apos;responsecode&apos;: ctx.getPreviousResult().getResponseCode(),
+    &apos;sentBytes&apos;: ctx.getPreviousResult().getSentBytes(),
+    &apos;receivedBytes&apos;: ctx.getPreviousResult().getBytesAsLong(),
+    &apos;responseMessage&apos;: ctx.getPreviousResult().getResponseMessage(),
+    &apos;samplecount&apos;: ctx.getPreviousResult().getSampleCount(),
+    &apos;errorCount&apos;: ctx.getPreviousResult().getErrorCount(),
+    &apos;time&apos;: ctx.getPreviousResult().getTimeStamp()])
+    payload.put(&apos;response_Details&apos;, responseDetails)
+    payload.put(&apos;thread_Details&apos;, [&apos;number_vusers&apos;: ctx.getThreadGroup().getNumberOfThreads()])
+    //log.info(new groovy.json.JsonBuilder(payload).toPrettyString())
+  }
+}
+catch(Exception e) {
+  log.error(&quot;Error in Grafana Metrics Listener : &quot; + e);
+}
+//Ignore the Auth token generator from sending the report to cosmos db
+if (sampleResult.getSampleLabel().equals(&quot;JSR223 Sampler&quot;)) {} else {
+  PostMeasurement(new JsonBuilder(payload).toPrettyString());
+}
+//post the result to Azure cosmos db
+void PostMeasurement(String Metrics) {
+  def httpclient = new DefaultHttpClient(new BasicHttpParams());
+  def httpPost = new HttpPost();
+  httpPost.setURI(new URI(vars.get(&quot;CosmosDB_API&quot;)));
+  httpPost.setEntity(new StringEntity(Metrics));
+  httpPost.addHeader(&quot;Accept&quot;, &quot;application/json&quot;);
+  httpPost.addHeader(&quot;x-ms-version&quot;, &quot;2016-07-11&quot;);
+  httpPost.addHeader(&quot;Authorization&quot;, &apos;${auth}&apos;); //AuthToken for cosmosdb
+  httpPost.addHeader(&quot;x-ms-date&quot;, &apos;${RFC1123time}&apos;);
+  HttpResponse response = httpclient.execute(httpPost);
+  EntityUtils.consumeQuietly(response.getEntity());
+}</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Listener>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
