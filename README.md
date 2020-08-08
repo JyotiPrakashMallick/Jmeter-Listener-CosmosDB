@@ -39,8 +39,6 @@
     
  ### Team
 
-> Or Contributors/People
-
 | <a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank">**Profile**</a> |  
 | :---: |  
 | [![Passport-Photograph.jpg](https://i.postimg.cc/prCNWtr6/Passport-Photograph.jpg)](https://postimg.cc/p5mcC4Df)    |  
