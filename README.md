@@ -41,7 +41,7 @@
 
 > Or Contributors/People
 
-| <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> |
+| <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> |
 | :---: |:---:| :---:|
-| [![Passport-Photograph.jpg](https://i.postimg.cc/prCNWtr6/Passport-Photograph.jpg)](https://postimg.cc/p5mcC4Df)    | [![Passport-Photograph.jpg](https://i.postimg.cc/prCNWtr6/Passport-Photograph.jpg)](https://postimg.cc/p5mcC4Df) | [![Passport-Photograph.jpg](https://i.postimg.cc/prCNWtr6/Passport-Photograph.jpg)](https://postimg.cc/p5mcC4Df)  |
-| <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
+| [![Passport-Photograph.jpg](https://i.postimg.cc/prCNWtr6/Passport-Photograph.jpg)](https://postimg.cc/p5mcC4Df)    | 
+| <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
