@@ -46,6 +46,6 @@
 
 ## Support
 
-Reach out to me at one of the following places!
+Reach out to me at following places!
 
 - Website at <a href="https://www.linkedin.com/in/jyoti-prakash-mallick-10488b1b/" target="_blank">`Linkedin Profile`</a>
