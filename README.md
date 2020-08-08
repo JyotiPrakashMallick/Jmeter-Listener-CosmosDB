@@ -14,21 +14,20 @@
   - 🔃 Create a new pull request.
 ---  
 
-### Pre-requisits
+## Pre-requisits
 * Azure Account with Cosmos DB configured with a partition key.
 * Jmeter 3.1 or above (** Crypto-js libraries for generating the auth token for connecting to cosmosdb)
 * Basic groovy scripting
 
 
-
-### Set up steps
-* Step 1: Azure Cosmos DB set up & configuration
+## Set up steps
+* **Step 1:** Azure Cosmos DB set up & configuration
   * Get the primary key and URI for Cosmos DB
     [![Cosmos.png](https://i.postimg.cc/JhrQXzMH/Cosmos.png)](https://postimg.cc/CR2DTYZw)
-* Step 2: Jmeter Configuration
+* **Step 2:** Jmeter Configuration
   * Download JMeter
   * Download and extract the crypto-js (_[can be download from here](https://github.com/brix/crypto-js/releases)_) library to __jmeter/bin__ folder
-* Step 3: Sample thread plan attached.
+* **Step 3:** Sample thread plan attached.
   * Configure the auth token generator for cosmos db.
  
     [![Auth-Token-Generator.png](https://i.postimg.cc/J41JP4s1/Auth-Token-Generator.png)](https://postimg.cc/PNRPqHbc)
